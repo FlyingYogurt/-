@@ -78,6 +78,42 @@
     .card h3 {
       color: #0ff;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #222;
+      color: #0ff;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background: #222;
+      color: white;
+    }
+    input[type="submit"] {
+      background: #0ff;
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    input[type="submit"]:hover {
+      background: #00cccc;
+    }
   </style>
 </head>
 <body>
@@ -102,29 +138,29 @@
   <h2>Υπηρεσίες</h2>
   <div class="services">
 
-    <a href="#" class="card">
+    <a href="presentation.html" class="card">
       <h3>Ιστοσελίδες Παρουσίασης</h3>
-      <p>Επαγγελματικές, responsive ιστοσελίδες με στόχο τη σωστή προβολή της επιχείρησής σας.</p>
+      <p>Επαγγελματικές ιστοσελίδες για την επιχείρησή σας.</p>
     </a>
 
-    <a href="#" class="card">
+    <a href="eshop.html" class="card">
       <h3>e-Shop</h3>
-      <p>Σύγχρονα ηλεκτρονικά καταστήματα με ασφαλείς πληρωμές και εύκολη διαχείριση.</p>
+      <p>Ηλεκτρονικά καταστήματα με πλήρεις λειτουργίες.</p>
     </a>
 
-    <a href="#" class="card">
+    <a href="seo.html" class="card">
       <h3>SEO & Google</h3>
-      <p>Βελτιστοποίηση της ιστοσελίδας σας για καλύτερη κατάταξη στις μηχανές αναζήτησης.</p>
+      <p>Καλύτερη κατάταξη στις μηχανές αναζήτησης.</p>
     </a>
 
-    <a href="#" class="card">
+    <a href="forms.html" class="card">
       <h3>Φόρμες & Επικοινωνία</h3>
-      <p>Εντυπωσιακές και λειτουργικές φόρμες για κρατήσεις ή αιτήματα.</p>
+      <p>Διαδραστικές φόρμες για επαφή και κρατήσεις.</p>
     </a>
 
-    <a href="#" class="card">
+    <a href="content.html" class="card">
       <h3>Δυναμικό Περιεχόμενο</h3>
-      <p>Δημιουργία blogs, portfolio, άρθρων και διαχειρίσιμου περιεχομένου.</p>
+      <p>Blogs, άρθρα, portfolio και περισσότερα.</p>
     </a>
 
   </div>
@@ -137,12 +173,39 @@
 
 <section id="pricing">
   <h2>Τιμοκατάλογος</h2>
-  <p>Προσιτά πακέτα σχεδιασμένα για κάθε ανάγκη. Επικοινωνήστε μαζί μας για προσφορά.</p>
+  <table>
+    <tr>
+      <th>Πακέτο</th>
+      <th>Περιλαμβάνει</th>
+      <th>Τιμή</th>
+    </tr>
+    <tr>
+      <td>Βασικό</td>
+      <td>1 σελίδα παρουσίασης, responsive design</td>
+      <td>150€</td>
+    </tr>
+    <tr>
+      <td>Επαγγελματικό</td>
+      <td>Πολυσέλιδη ιστοσελίδα, φόρμες, SEO</td>
+      <td>350€</td>
+    </tr>
+    <tr>
+      <td>e-Shop</td>
+      <td>Κατάστημα, προϊόντα, πληρωμές</td>
+      <td>600€</td>
+    </tr>
+  </table>
 </section>
 
 <section class="cta" id="epikoinonia">
   <h2>Επικοινωνήστε μαζί μας</h2>
-  <p>Στείλτε μας το αίτημά σας και θα σας απαντήσουμε το συντομότερο!</p>
+  <p>Στείλτε μας το μήνυμά σας και θα επικοινωνήσουμε άμεσα!</p>
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <input type="text" name="name" placeholder="Το όνομά σας" required />
+    <input type="email" name="email" placeholder="Το email σας" required />
+    <textarea name="message" rows="5" placeholder="Το μήνυμά σας..." required></textarea>
+    <input type="submit" value="Αποστολή" />
+  </form>
 </section>
 
 </body>
