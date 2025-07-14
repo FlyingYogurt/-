@@ -147,3 +147,152 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Κατασκευή Ιστοσελίδων</title>
+  <style>
+    body {
+      background: #0f1116;
+      color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background: #1a1d23;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      height: 40px;
+    }
+    .nav-links a {
+      color: #0ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background: url('header-banner.jpg') center/cover no-repeat;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    .cta {
+      background: url('cta-banner.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #0ff;
+      margin-bottom: 20px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1a1d23;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.1);
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:hover {
+      background: #1d1f25;
+    }
+    .card h3 {
+      color: #0ff;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <img src="logo.png" alt="Logo" class="logo">
+  <div class="nav-links">
+    <a href="#">Αρχική</a>
+    <a href="#services">Υπηρεσίες</a>
+    <a href="#about">Σχετικά</a>
+    <a href="#pricing">Τιμές</a>
+    <a href="#epikoinonia">Επικοινωνία</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Κατασκευή Ιστοσελίδων για Επιχειρήσεις</h1>
+  <p>Σύγχρονες, γρήγορες και κομψές ιστοσελίδες για επιχειρήσεις στην Ελλάδα.</p>
+</header>
+
+<section id="services">
+  <h2>Υπηρεσίες</h2>
+  <div class="services">
+
+    <a href="presentation.html" class="card">
+      <h3>Ιστοσελίδες Παρουσίασης</h3>
+      <p>Επαγγελματικές, responsive ιστοσελίδες με στόχο τη σωστή προβολή της επιχείρησής σας.</p>
+    </a>
+
+    <a href="eshop.html" class="card">
+      <h3>e-Shop</h3>
+      <p>Σύγχρονα ηλεκτρονικά καταστήματα με ασφαλείς πληρωμές και εύκολη διαχείριση.</p>
+    </a>
+
+    <a href="seo.html" class="card">
+      <h3>SEO & Google</h3>
+      <p>Βελτιστοποίηση της ιστοσελίδας σας για καλύτερη κατάταξη στις μηχανές αναζήτησης.</p>
+    </a>
+
+    <a href="forms.html" class="card">
+      <h3>Φόρμες & Επικοινωνία</h3>
+      <p>Εντυπωσιακές και λειτουργικές φόρμες για κρατήσεις ή αιτήματα.</p>
+    </a>
+
+    <a href="dynamic.html" class="card">
+      <h3>Δυναμικό Περιεχόμενο</h3>
+      <p>Δημιουργία blogs, portfolio, άρθρων και διαχειρίσιμου περιεχομένου.</p>
+    </a>
+
+  </div>
+</section>
+
+<section id="about">
+  <h2>Σχετικά με εμάς</h2>
+  <p>Είμαστε μια ομάδα επαγγελματιών με πάθος για την τεχνολογία και τον σχεδιασμό. Δημιουργούμε ισχυρή online παρουσία για μικρές και μεσαίες επιχειρήσεις στην Ελλάδα με στόχο την πραγματική απόδοση.</p>
+</section>
+
+<section id="pricing">
+  <h2>Τιμοκατάλογος</h2>
+  <p>Προσιτά πακέτα σχεδιασμένα για κάθε ανάγκη. Επικοινωνήστε μαζί μας για προσφορά.</p>
+</section>
+
+<section class="cta" id="epikoinonia">
+  <h2>Επικοινωνήστε μαζί μας</h2>
+  <p>Στείλτε μας το αίτημά σας και θα σας απαντήσουμε το συντομότερο!</p>
+</section>
+
+</body>
+</html>
