@@ -1,108 +1,86 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Κατασκευή Ιστοσελίδων για Επιχειρήσεις</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Κατασκευή Ιστοσελίδων</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: #0f1116; color: #f1f1f1; line-height: 1.6; }
-    nav { background: #1a1d23; padding: 15px 20px; text-align: center; }
-    nav a { color: #0ff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-  header {
-  background: url('header-banner.jpg') center/cover no-repeat;
-    header h1 { font-size: 3em; margin-bottom: 15px; text-shadow: 1px 1px 3px #000; }
-    header p { font-size: 1.3em; text-shadow: 1px 1px 2px #000; }
-    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 40px; font-size: 2em; color: #0ff; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-    .card {
-      background: #1a1d23; padding: 30px; border-radius: 10px; text-align: left;
-      box-shadow: 0 0 10px rgba(0,255,255,0.1); transition: transform 0.3s ease;
+    body {
+      background: #0f1116;
+      color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    .card:hover { transform: translateY(-5px); }
-    .card i { font-size: 2.5em; margin-bottom: 15px; color: #0ff; display: block; }
-    .card h3 { color: #0ff; }
-    .card p { margin-top: 10px; color: #ccc; }
+    nav {
+      background: #1a1d23;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      height: 40px;
+    }
+    .nav-links a {
+      color: #0ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background: url('header-banner.jpg') center/cover no-repeat;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+    }
     .cta {
-  background: url('cta-banner.jpg') center/cover no-repeat;
-}
-    .cta h2 { text-shadow: 1px 1px 3px #000; }
-    .cta a {
-      color: #0ff; text-decoration: none; font-weight: bold;
-      background: rgba(0,0,0,0.6); border: 2px solid #0ff;
-      padding: 12px 25px; border-radius: 30px; display: inline-block;
-      margin-top: 15px; transition: background 0.3s ease;
+      background: url('cta-banner.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
     }
-    .cta a:hover { background: #0ff; color: #000; }
-    .contact-form {
-      background: #1a1d23; padding: 40px; border-radius: 10px;
-      max-width: 700px; margin: 40px auto;
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #0ff;
+      margin-bottom: 20px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1a1d23;
+      padding: 30px;
+      border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,255,255,0.1);
+      text-decoration: none;
+      color: inherit;
     }
-    .contact-form label { display: block; margin-bottom: 10px; font-weight: bold; }
-    .contact-form input, .contact-form textarea {
-      width: 100%; padding: 12px; margin-bottom: 20px;
-      border-radius: 5px; border: none;
-      background: #2c2f36; color: white;
+    .card:hover {
+      background: #1d1f25;
     }
-    .contact-form button {
-      padding: 10px 20px; background: #0ff; color: #000;
-      border: none; border-radius: 30px; cursor: pointer; font-weight: bold;
+    .card h3 {
+      color: #0ff;
     }
-    .contact-form button:hover { background: #00cccc; }
-    footer { background: #0a0c10; color: #888; text-align: center; padding: 25px 20px; font-size: 0.9em; }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#">Αρχική</a>
-    <a href="#services">Υπηρεσίες</a>
-    <a href="#about">Σχετικά</a>
-    <a href="#pricing">Τιμές</a>
-    <a href="#epikoinonia">Επικοινωνία</a>
-  </nav>
-
-  <header>
-    <h1>Κατασκευή Ιστοσελίδων για Επιχειρήσεις</h1>
-    <p>Σύγχρονες, γρήγορες και κομψές ιστοσελίδες για επιχειρήσεις στην Ελλάδα.</p>
-  </header>
-
-  <style>
-  nav {
-    background: #1a1d23;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-.logo {
-  content: url('logo.png');
-  height: 40px;
-}
-  .nav-links a {
-    color: #0ff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .nav-links a:hover {
-    text-decoration: underline;
-  }
-  header {
-    background: url('images/header-banner.jpg') center/cover no-repeat;
-    padding: 120px 20px;
-    text-align: center;
-    color: white;
-  }
-  .cta {
-    background: url('images/cta-banner.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-  }
-</style>
 
 <nav>
   <img src="logo.png" alt="Logo" class="logo">
@@ -115,48 +93,57 @@
   </div>
 </nav>
 
+<header>
+  <h1>Κατασκευή Ιστοσελίδων για Επιχειρήσεις</h1>
+  <p>Σύγχρονες, γρήγορες και κομψές ιστοσελίδες για επιχειρήσεις στην Ελλάδα.</p>
+</header>
 
-  <section id="about">
-    <h2>Σχετικά με εμάς</h2>
-    <p style="max-width:800px; margin:20px auto; text-align:center">Είμαστε μια ομάδα επαγγελματιών με πάθος για την τεχνολογία και τον σχεδιασμό. Δημιουργούμε ισχυρή online παρουσία για μικρές και μεσαίες επιχειρήσεις στην Ελλάδα με στόχο την πραγματική απόδοση.</p>
-  </section>
+<section id="services">
+  <h2>Υπηρεσίες</h2>
+  <div class="services">
 
-  <section id="pricing">
-    <h2>Τιμοκατάλογος</h2>
-    <p style="text-align:center; margin-bottom:20px">Ενδεικτικές τιμές:</p>
-    <ul style="max-width:600px; margin:auto; list-style:none; padding-left:0">
-      <li>✅ Landing Page: από 150€</li>
-      <li>✅ Πλήρης Ιστοσελίδα (έως 5 σελίδες): από 350€</li>
-      <li>✅ e-Shop με WooCommerce: από 600€</li>
-      <li>✅ SEO Βελτιστοποίηση: από 120€</li>
-    </ul>
-    <p style="text-align:center; margin-top:20px">Για προσφορά προσαρμοσμένη στις ανάγκες σας, επικοινωνήστε μαζί μας!</p>
-  </section>
+    <a href="presentation.html" class="card">
+      <h3>Ιστοσελίδες Παρουσίασης</h3>
+      <p>Επαγγελματικές, responsive ιστοσελίδες με στόχο τη σωστή προβολή της επιχείρησής σας.</p>
+    </a>
 
-  <div class="cta">
-    <h2>Έτοιμος για το επόμενο βήμα;</h2>
-    <a href="#epikoinonia">Επικοινώνησε μαζί μας</a>
+    <a href="eshop.html" class="card">
+      <h3>e-Shop</h3>
+      <p>Σύγχρονα ηλεκτρονικά καταστήματα με ασφαλείς πληρωμές και εύκολη διαχείριση.</p>
+    </a>
+
+    <a href="seo.html" class="card">
+      <h3>SEO & Google</h3>
+      <p>Βελτιστοποίηση της ιστοσελίδας σας για καλύτερη κατάταξη στις μηχανές αναζήτησης.</p>
+    </a>
+
+    <a href="forms.html" class="card">
+      <h3>Φόρμες & Επικοινωνία</h3>
+      <p>Εντυπωσιακές και λειτουργικές φόρμες για κρατήσεις ή αιτήματα.</p>
+    </a>
+
+    <a href="dynamic.html" class="card">
+      <h3>Δυναμικό Περιεχόμενο</h3>
+      <p>Δημιουργία blogs, portfolio, άρθρων και διαχειρίσιμου περιεχομένου.</p>
+    </a>
+
   </div>
+</section>
 
-  <section id="epikoinonia" class="contact-form">
-    <h2 style="text-align:center; margin-bottom: 30px;">Φόρμα Επικοινωνίας</h2>
-    <form action="#" method="post">
-      <label for="name">Ονοματεπώνυμο:</label>
-      <input type="text" id="name" name="name" required>
+<section id="about">
+  <h2>Σχετικά με εμάς</h2>
+  <p>Είμαστε μια ομάδα επαγγελματιών με πάθος για την τεχνολογία και τον σχεδιασμό. Δημιουργούμε ισχυρή online παρουσία για μικρές και μεσαίες επιχειρήσεις στην Ελλάδα με στόχο την πραγματική απόδοση.</p>
+</section>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+<section id="pricing">
+  <h2>Τιμοκατάλογος</h2>
+  <p>Προσιτά πακέτα σχεδιασμένα για κάθε ανάγκη. Επικοινωνήστε μαζί μας για προσφορά.</p>
+</section>
 
-      <label for="message">Μήνυμα:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+<section class="cta" id="epikoinonia">
+  <h2>Επικοινωνήστε μαζί μας</h2>
+  <p>Στείλτε μας το αίτημά σας και θα σας απαντήσουμε το συντομότερο!</p>
+</section>
 
-      <button type="submit">Αποστολή</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Δημιουργία Ιστοσελίδων στην Ελλάδα</p>
-    <p>Email: info@example.com | Τηλ: +30 690 000 0000</p>
-  </footer>
 </body>
 </html>
