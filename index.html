@@ -17,6 +17,20 @@
       color: #f1f1f1;
       line-height: 1.6;
     }
+    nav {
+      background: #1a1d23;
+      padding: 15px 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #0ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     header {
       background: url('https://images.unsplash.com/photo-1532619675605-1ede6d4ba183?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       padding: 120px 20px;
@@ -55,6 +69,7 @@
       text-align: center;
       box-shadow: 0 0 10px rgba(0,255,255,0.1);
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
     .card:hover {
       transform: translateY(-5px);
@@ -63,6 +78,13 @@
       font-size: 2.5em;
       margin-bottom: 15px;
       color: #0ff;
+    }
+    .card p {
+      display: none;
+    }
+    .card.open p {
+      display: block;
+      margin-top: 10px;
     }
     .cta {
       background: url('https://images.unsplash.com/photo-1612831819585-d09ccdb981fe?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -133,37 +155,71 @@
       font-size: 0.9em;
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('open');
+        });
+      });
+    });
+  </script>
 </head>
 <body>
+  <nav>
+    <a href="#">Αρχική</a>
+    <a href="#services">Υπηρεσίες</a>
+    <a href="#about">Σχετικά</a>
+    <a href="#pricing">Τιμές</a>
+    <a href="#epikoinonia">Επικοινωνία</a>
+  </nav>
+
   <header>
     <h1>Κατασκευή Ιστοσελίδων για Επιχειρήσεις</h1>
     <p>Σύγχρονες, γρήγορες και κομψές ιστοσελίδες για επιχειρήσεις στην Ελλάδα.</p>
   </header>
 
-  <section>
+  <section id="services">
     <h2>Υπηρεσίες</h2>
     <div class="services">
       <div class="card">
         <i class="fas fa-laptop-code"></i>
         <h3>Ιστοσελίδες Παρουσίασης</h3>
-        <p>Κατασκευή responsive ιστοσελίδων για επιχειρηματική παρουσίαση.</p>
+        <p>Ιδανικές για επαγγελματική προβολή, με μοντέρνο design και mobile-first προσέγγιση.</p>
       </div>
       <div class="card">
         <i class="fas fa-shopping-cart"></i>
         <h3>e-Shop</h3>
-        <p>Ηλεκτρονικά καταστήματα με εύχρηστο σύστημα παραγγελιών.</p>
+        <p>Πλήρως λειτουργικά ηλεκτρονικά καταστήματα με ασφαλές checkout και εύκολη διαχείριση προϊόντων.</p>
       </div>
       <div class="card">
         <i class="fas fa-search"></i>
         <h3>SEO & Google</h3>
-        <p>Βελτιστοποίηση για μηχανές αναζήτησης και σύνδεση με Google.</p>
+        <p>Προώθηση στις μηχανές αναζήτησης για μεγαλύτερη ορατότητα και περισσότερους πελάτες.</p>
       </div>
       <div class="card">
         <i class="fas fa-envelope"></i>
         <h3>Φόρμες Επικοινωνίας</h3>
-        <p>Online φόρμες για κρατήσεις ή αιτήματα επικοινωνίας.</p>
+        <p>Φόρμες επαφής, αιτημάτων ή κρατήσεων, πλήρως παραμετροποιήσιμες.</p>
       </div>
     </div>
+  </section>
+
+  <section id="about">
+    <h2>Σχετικά με εμάς</h2>
+    <p style="max-width:800px; margin:20px auto; text-align:center">Είμαστε μια ομάδα επαγγελματιών με πάθος για την τεχνολογία και τον σχεδιασμό. Δημιουργούμε ισχυρή online παρουσία για μικρές και μεσαίες επιχειρήσεις στην Ελλάδα με στόχο την πραγματική απόδοση.</p>
+  </section>
+
+  <section id="pricing">
+    <h2>Τιμοκατάλογος</h2>
+    <p style="text-align:center; margin-bottom:20px">Ενδεικτικές τιμές:</p>
+    <ul style="max-width:600px; margin:auto; list-style:none; padding-left:0">
+      <li>✅ Landing Page: από 150€</li>
+      <li>✅ Πλήρης Ιστοσελίδα (έως 5 σελίδες): από 350€</li>
+      <li>✅ e-Shop με WooCommerce: από 600€</li>
+      <li>✅ SEO Βελτιστοποίηση: από 120€</li>
+    </ul>
+    <p style="text-align:center; margin-top:20px">Για προσφορά προσαρμοσμένη στις ανάγκες σας, επικοινωνήστε μαζί μας!</p>
   </section>
 
   <div class="cta">
@@ -193,3 +249,4 @@
   </footer>
 </body>
 </html>
+
