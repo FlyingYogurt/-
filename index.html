@@ -4,166 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Κατασκευή Ιστοσελίδων για Επιχειρήσεις</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1CmU6RMkD9DxGvtnQ2zOQsbZ3yWcM2nBkYk+1ugJq8zh9fK+u4sSxk8V6MHHRzFuWwaEtL8vwyY6b6Jdn9l8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0f1116;
-      color: #f1f1f1;
-      line-height: 1.6;
-    }
-    nav {
-      background: #1a1d23;
-      padding: 15px 20px;
-      text-align: center;
-    }
-    nav a {
-      color: #0ff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0f1116; color: #f1f1f1; line-height: 1.6; }
+    nav { background: #1a1d23; padding: 15px 20px; text-align: center; }
+    nav a { color: #0ff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
     header {
-      background: url('https://images.unsplash.com/photo-1532619675605-1ede6d4ba183?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      padding: 120px 20px;
-      text-align: center;
-      color: white;
+      background: url('https://source.unsplash.com/1600x600/?technology,web') center/cover no-repeat;
+      padding: 120px 20px; text-align: center; color: white;
     }
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 15px;
-      text-shadow: 1px 1px 3px #000;
-    }
-    header p {
-      font-size: 1.3em;
-      text-shadow: 1px 1px 2px #000;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2em;
-      color: #0ff;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
+    header h1 { font-size: 3em; margin-bottom: 15px; text-shadow: 1px 1px 3px #000; }
+    header p { font-size: 1.3em; text-shadow: 1px 1px 2px #000; }
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 40px; font-size: 2em; color: #0ff; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
     .card {
-      background: #1a1d23;
-      padding: 30px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,255,255,0.1);
-      transition: transform 0.3s ease;
-      cursor: pointer;
+      background: #1a1d23; padding: 30px; border-radius: 10px; text-align: left;
+      box-shadow: 0 0 10px rgba(0,255,255,0.1); transition: transform 0.3s ease;
     }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card i {
-      font-size: 2.5em;
-      margin-bottom: 15px;
-      color: #0ff;
-    }
-    .card p {
-      display: none;
-    }
-    .card.open p {
-      display: block;
-      margin-top: 10px;
-    }
+    .card:hover { transform: translateY(-5px); }
+    .card i { font-size: 2.5em; margin-bottom: 15px; color: #0ff; display: block; }
+    .card h3 { color: #0ff; }
+    .card p { margin-top: 10px; color: #ccc; }
     .cta {
-      background: url('https://images.unsplash.com/photo-1612831819585-d09ccdb981fe?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
+      background: url('https://source.unsplash.com/1600x400/?business,success') center/cover no-repeat;
+      color: white; text-align: center; padding: 60px 20px;
     }
-    .cta h2 {
-      color: #fff;
-      text-shadow: 1px 1px 3px #000;
-    }
+    .cta h2 { text-shadow: 1px 1px 3px #000; }
     .cta a {
-      color: #0ff;
-      text-decoration: none;
-      font-weight: bold;
-      background: rgba(0,0,0,0.6);
-      border: 2px solid #0ff;
-      padding: 12px 25px;
-      border-radius: 30px;
-      display: inline-block;
-      margin-top: 15px;
-      transition: background 0.3s ease;
+      color: #0ff; text-decoration: none; font-weight: bold;
+      background: rgba(0,0,0,0.6); border: 2px solid #0ff;
+      padding: 12px 25px; border-radius: 30px; display: inline-block;
+      margin-top: 15px; transition: background 0.3s ease;
     }
-    .cta a:hover {
-      background: #0ff;
-      color: #000;
-    }
+    .cta a:hover { background: #0ff; color: #000; }
     .contact-form {
-      background: #1a1d23;
-      padding: 40px;
-      border-radius: 10px;
-      max-width: 700px;
-      margin: 40px auto;
+      background: #1a1d23; padding: 40px; border-radius: 10px;
+      max-width: 700px; margin: 40px auto;
       box-shadow: 0 0 10px rgba(0,255,255,0.1);
     }
-    .contact-form label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      border: none;
-      background: #2c2f36;
-      color: white;
+    .contact-form label { display: block; margin-bottom: 10px; font-weight: bold; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 12px; margin-bottom: 20px;
+      border-radius: 5px; border: none;
+      background: #2c2f36; color: white;
     }
     .contact-form button {
-      padding: 10px 20px;
-      background: #0ff;
-      color: #000;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: bold;
+      padding: 10px 20px; background: #0ff; color: #000;
+      border: none; border-radius: 30px; cursor: pointer; font-weight: bold;
     }
-    .contact-form button:hover {
-      background: #00cccc;
-    }
-    footer {
-      background: #0a0c10;
-      color: #888;
-      text-align: center;
-      padding: 25px 20px;
-      font-size: 0.9em;
-    }
+    .contact-form button:hover { background: #00cccc; }
+    footer { background: #0a0c10; color: #888; text-align: center; padding: 25px 20px; font-size: 0.9em; }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('click', () => {
-          card.classList.toggle('open');
-        });
-      });
-    });
-  </script>
 </head>
 <body>
   <nav>
@@ -185,22 +79,27 @@
       <div class="card">
         <i class="fas fa-laptop-code"></i>
         <h3>Ιστοσελίδες Παρουσίασης</h3>
-        <p>Ιδανικές για επαγγελματική προβολή, με μοντέρνο design και mobile-first προσέγγιση.</p>
+        <p>Κατασκευάζουμε καθαρές και επαγγελματικές ιστοσελίδες για να προβάλεις την επιχείρησή σου, με έμφαση στη ταχύτητα και το responsive design.</p>
       </div>
       <div class="card">
         <i class="fas fa-shopping-cart"></i>
         <h3>e-Shop</h3>
-        <p>Πλήρως λειτουργικά ηλεκτρονικά καταστήματα με ασφαλές checkout και εύκολη διαχείριση προϊόντων.</p>
+        <p>Αναλαμβάνουμε e-shops με εύκολη διαχείριση προϊόντων, καλάθι αγορών, ασφαλείς πληρωμές και σύνδεση με courier.</p>
       </div>
       <div class="card">
         <i class="fas fa-search"></i>
         <h3>SEO & Google</h3>
-        <p>Προώθηση στις μηχανές αναζήτησης για μεγαλύτερη ορατότητα και περισσότερους πελάτες.</p>
+        <p>Βελτιστοποιούμε την ιστοσελίδα σου για αναζητήσεις Google με τεχνικό SEO, ταχύτητα, metadata και σύνδεση με Google Business & Maps.</p>
       </div>
       <div class="card">
         <i class="fas fa-envelope"></i>
-        <h3>Φόρμες Επικοινωνίας</h3>
-        <p>Φόρμες επαφής, αιτημάτων ή κρατήσεων, πλήρως παραμετροποιήσιμες.</p>
+        <h3>Φόρμες & Επικοινωνία</h3>
+        <p>Φτιάχνουμε εύχρηστες φόρμες επικοινωνίας ή αιτημάτων, συνδεδεμένες με email, chatbot ή ακόμη και WhatsApp.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-database"></i>
+        <h3>Δυναμικό Περιεχόμενο</h3>
+        <p>Κατασκευάζουμε δυναμικές ιστοσελίδες με blog, νέα, portfolio, ή προσαρμοσμένα dashboards για πιο σύνθετες ανάγκες.</p>
       </div>
     </div>
   </section>
@@ -249,4 +148,3 @@
   </footer>
 </body>
 </html>
-
